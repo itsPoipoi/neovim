@@ -21,7 +21,7 @@ Kickstart Guide:
     plugins or Neovim features used in Kickstart.
 --]]
 
-vim.cmd 'source ~/.config/nvim/.vimrc'
+vim.cmd 'source ~/.config/nvim/vimrc'
 
 require('remaps')
 require('set')
