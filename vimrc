@@ -26,4 +26,3 @@ function g:Undotree_CustomMap()
     map <buffer> + J
     map <buffer> - K
 endfunction
-test
