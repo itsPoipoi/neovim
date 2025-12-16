@@ -34,7 +34,7 @@ local settings = {
       { ' File Browser', 'Telescope file_browser', '<leader>sb' },
       { ' New File', "lua require'startup'.new_file()", '<leader>nf' },
     },
-    highlight = 'String',
+    highlight = 'TSString',
     default_color = '',
     oldfiles_amount = 0,
   },
