@@ -29,12 +29,24 @@ local settings = {
     margin = 0,
     content = {
       { ' Find File', 'Telescope find_files', '<leader>sf' },
-      { '󰍉 Find Word', 'Telescope live_grep', '<leader>sg'},
+      { '󰍉 Find Word', 'Telescope live_grep', '<leader>sg' },
       { ' Recent Files', 'Telescope oldfiles', '<leader>s.' },
       { ' File Browser', 'Telescope file_browser', '<leader>sb' },
       { ' New File', "lua require'startup'.new_file()", '<leader>nf' },
     },
     highlight = 'TSString',
+    default_color = '',
+    oldfiles_amount = 0,
+  },
+  footer = {
+    type = 'text',
+    oldfiles_directory = false,
+    align = 'center',
+    fold_section = false,
+    title = 'Footer',
+    margin = 0,
+    content = { '' },
+    highlight = 'Number',
     default_color = '',
     oldfiles_amount = 0,
   },
@@ -44,7 +56,7 @@ local settings = {
     cursor_column = 0.5,
     empty_lines_between_mappings = true,
     disable_statuslines = false,
-    paddings = { 10, 5, 0, 0 },
+    paddings = { 10, 5, 100, 0 },
   },
   mappings = {
     execute_command = '<CR>',
@@ -57,6 +69,6 @@ local settings = {
     background = '#1f2227',
     folded_section = '#56b6c2',
   },
-  parts = { 'header', 'body' },
+  parts = { 'header', 'body', 'footer' },
 }
 return settings
