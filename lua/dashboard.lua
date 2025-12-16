@@ -15,7 +15,7 @@ local settings = {
       ' ██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║',
       ' ╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝',
     },
-    highlight = 'TSString',
+    highlight = 'Function',
     default_color = '',
     oldfiles_amount = 0,
   },
