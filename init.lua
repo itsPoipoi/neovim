@@ -23,8 +23,8 @@ Kickstart Guide:
 
 vim.cmd 'source ~/.config/nvim/vimrc'
 
-require('remaps')
-require('set')
+require 'remaps'
+require 'set'
 
 -- Set <space> as the leader key
 -- See `:help mapleader`
@@ -83,6 +83,14 @@ require('lazy').setup({
   'mbbill/undotree',
 
   'tpope/vim-fugitive',
+
+  {
+    'startup-nvim/startup.nvim',
+    dependencies = { 'nvim-telescope/telescope.nvim', 'nvim-lua/plenary.nvim', 'nvim-telescope/telescope-file-browser.nvim' },
+    config = function()
+      require('startup').setup(require 'dashboard')
+    end,
+  },
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
@@ -180,6 +188,7 @@ require('lazy').setup({
       -- Document existing key chains
       spec = {
         { '<leader>s', group = '[S]earch' },
+        { '<leader>p', group = 'Directory' },
         { '<leader>t', group = '[T]oggle' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
       },
@@ -721,6 +730,7 @@ require('lazy').setup({
     config = function()
       ---@diagnostic disable-next-line: missing-fields
       require('tokyonight').setup {
+        transparent = true,
         styles = {
           comments = { italic = false }, -- Disable italics in comments
         },
