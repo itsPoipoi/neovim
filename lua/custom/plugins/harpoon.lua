@@ -67,6 +67,18 @@ return {
     vim.keymap.set('n', '<A-4>', function()
       harpoon:list():select(4)
     end)
+    vim.keymap.set('n', '<A-5>', function()
+      harpoon:list():select(5)
+    end)
+    vim.keymap.set('n', '<A-6>', function()
+      harpoon:list():select(6)
+    end)
+    vim.keymap.set('n', '<A-7>', function()
+      harpoon:list():select(7)
+    end)
+    vim.keymap.set('n', '<A-8>', function()
+      harpoon:list():select(8)
+    end)
 
     -- Toggle previous & next buffers stored within Harpoon list
     vim.keymap.set('n', '<A-a>', function()
