@@ -1,3 +1,7 @@
+" Auto suda when needed
+let g:suda_smart_edit = 1
+
+" --- Undo tree settings ---
 if !exists('g:undotree_WindowLayout')
     let g:undotree_WindowLayout = 2
 endif

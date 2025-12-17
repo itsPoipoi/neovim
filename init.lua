@@ -78,6 +78,8 @@ require('lazy').setup({
 
   'ThePrimeagen/vim-be-good',
 
+  'lambdalisue/vim-suda',
+
   'nvim-treesitter/nvim-treesitter-context',
 
   'mbbill/undotree',
