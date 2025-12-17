@@ -42,7 +42,9 @@ vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
 vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
 -- Fugitive
-vim.keymap.set('n', '<leader>g', vim.cmd.Git, { desc = 'Git Status' })
+vim.keymap.set('n', '<leader>gs', vim.cmd.Git, { desc = 'Git Status' })
+vim.keymap.set('n', '<leader>gn', "<cmd>diffget //2<CR>", { desc = 'Choose Left Diff' })
+vim.keymap.set('n', '<leader>gr', "<cmd>diffget //3<CR>", { desc = 'Choose Right Diff' })
 
 -- Remap for Ergo-L:
 vim.keymap.set({ 'n', 'v' }, '+', 'gj')
