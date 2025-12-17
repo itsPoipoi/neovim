@@ -55,16 +55,16 @@ return {
     -- vim.keymap.set("n", "<leader>r", function() harpoon:list():remove() end, { desc = "Remove from Harpoon" })
 
     -- Selection mappings
-    vim.keymap.set('n', '<A-r>', function()
+    vim.keymap.set('n', '<A-1>', function()
       harpoon:list():select(1)
     end)
-    vim.keymap.set('n', '<A-t>', function()
+    vim.keymap.set('n', '<A-2>', function()
       harpoon:list():select(2)
     end)
-    vim.keymap.set('n', '<A-i>', function()
+    vim.keymap.set('n', '<A-3>', function()
       harpoon:list():select(3)
     end)
-    vim.keymap.set('n', '<A-u>', function()
+    vim.keymap.set('n', '<A-4>', function()
       harpoon:list():select(4)
     end)
 
