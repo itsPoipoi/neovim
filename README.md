@@ -9,8 +9,6 @@ git clone https://github.com/itsPoipoi/neovim.git "${XDG_CONFIG_HOME:-$HOME/.con
 
 Below you can find OS specific install instructions for Neovim and dependencies.
 
-After installing all the dependencies continue with the [Install Kickstart](#Install-Kickstart) step.
-
 #### Windows Installation
 
 <details><summary>Windows with Microsoft C++ Build Tools and CMake</summary>
