@@ -5,7 +5,6 @@
 ```sh
 git clone https://github.com/itsPoipoi/neovim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 ```
-</details>
 
 <details><summary> Windows </summary>
 
