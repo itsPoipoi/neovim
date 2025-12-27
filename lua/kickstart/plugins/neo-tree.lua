@@ -17,6 +17,7 @@ return {
   },
 
   opts = {
+    sort_case_insensitive = true, -- used when sorting files and directories in the tree
     event_handlers = {
       {
         event = 'file_open_requested',
