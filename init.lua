@@ -26,6 +26,15 @@ vim.cmd 'source ~/.config/nvim/vimrc'
 require 'remaps'
 require 'set'
 
+-- vim.cmd([[
+-- highlight! link NeoTreeDirectoryIcon NvimTreeFolderIcon
+-- highlight! link NeoTreeDirectoryName NvimTreeFolderName
+-- highlight! link NeoTreeSymbolicLinkTarget NvimTreeSymlink
+-- highlight! link NeoTreeRootName NvimTreeRootFolder
+-- highlight! link NeoTreeDirectoryName NvimTreeOpenedFolderName
+-- highlight! link NeoTreeFileNameOpened NvimTreeOpenedFile
+-- ]])
+
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
@@ -46,26 +55,26 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-vim.api.nvim_create_autocmd({ "VimEnter", "VimResume", "UIEnter" }, {
-    group = vim.api.nvim_create_augroup("KittySetVarVimEnter", { clear = true }),
-    callback = function()
-        if vim.api.nvim_ui_send then
-            vim.api.nvim_ui_send("\x1b]1337;SetUserVar=in_editor=MQo\007")
-        else
-            io.stdout:write("\x1b]1337;SetUserVar=in_editor=MQo\007")
-        end
-    end,
+vim.api.nvim_create_autocmd({ 'VimEnter', 'VimResume', 'UIEnter' }, {
+  group = vim.api.nvim_create_augroup('KittySetVarVimEnter', { clear = true }),
+  callback = function()
+    if vim.api.nvim_ui_send then
+      vim.api.nvim_ui_send '\x1b]1337;SetUserVar=in_editor=MQo\007'
+    else
+      io.stdout:write '\x1b]1337;SetUserVar=in_editor=MQo\007'
+    end
+  end,
 })
 
-vim.api.nvim_create_autocmd({ "VimLeave", "VimSuspend" }, {
-    group = vim.api.nvim_create_augroup("KittyUnsetVarVimLeave", { clear = true }),
-    callback = function()
-        if vim.api.nvim_ui_send then
-            vim.api.nvim_ui_send("\x1b]1337;SetUserVar=in_editor=MQo\007")
-        else
-            io.stdout:write("\x1b]1337;SetUserVar=in_editor\007")
-        end
-    end,
+vim.api.nvim_create_autocmd({ 'VimLeave', 'VimSuspend' }, {
+  group = vim.api.nvim_create_augroup('KittyUnsetVarVimLeave', { clear = true }),
+  callback = function()
+    if vim.api.nvim_ui_send then
+      vim.api.nvim_ui_send '\x1b]1337;SetUserVar=in_editor=MQo\007'
+    else
+      io.stdout:write '\x1b]1337;SetUserVar=in_editor\007'
+    end
+  end,
 })
 
 -- [[ Install `lazy.nvim` plugin manager ]]
@@ -469,6 +478,7 @@ require('lazy').setup({
             if vim.fn.has 'nvim-0.11' == 1 then
               return client:supports_method(method, bufnr)
             else
+              ---@diagnostic disable-next-line: param-type-mismatch
               return client.supports_method(method, { bufnr = bufnr })
             end
           end
@@ -866,7 +876,7 @@ require('lazy').setup({
   require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
   -- require 'kickstart.plugins.autopairs',
-  -- require 'kickstart.plugins.neo-tree',
+  require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
