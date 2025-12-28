@@ -23,9 +23,6 @@ Kickstart Guide:
 
 vim.cmd 'source ~/.config/nvim/vimrc'
 
-require 'remaps'
-require 'set'
-
 -- vim.cmd([[
 -- highlight! link NeoTreeDirectoryIcon NvimTreeFolderIcon
 -- highlight! link NeoTreeDirectoryName NvimTreeFolderName
