@@ -2,6 +2,11 @@ return {
   -- Load all theme plugins but don't apply them
   -- This ensures all colorschemes are available for hot-reloading
   {
+    "ribru17/bamboo.nvim",
+    lazy = true,
+    priority = 1000,
+  },
+  {
     "bjarneo/aether.nvim",
     lazy = true,
     priority = 1000,
@@ -36,11 +41,6 @@ return {
     lazy = true,
     priority = 1000,
     opts = {},
-  },
-  {
-    "tahayvr/sunset-drive.nvim",
-    lazy = true,
-    priority = 1000,
   },
   {
     "bjarneo/ethereal.nvim",
