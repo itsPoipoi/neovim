@@ -6,45 +6,43 @@ local map = vim.keymap.set
 -- Remap for Ergo-L
 map({ "n", "x", "v" }, "+", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
 map({ "n", "x", "v" }, "-", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = true, silent = true })
-map({ "n", "x", "v" }, ',', ';')
-map('n', ';', ',')
-map('n', 'U', '<C-r>')
+map({ "n", "x", "v" }, ",", ";")
+map("n", ";", ",")
+map("n", "U", "<C-r>")
 
 -- Create empty lines
-map('n', '<A-o>', '@="m`o<C-V><Esc>``"<CR>', { desc = "Create empty line below", silent = true })
-map('n', '<A-O>', '@="m`O<C-V><Esc>``"<CR>', { desc = "Create empty line above", silent = true })
+map("n", "<A-o>", '@="m`o<C-V><Esc>``"<CR>', { desc = "Create Empty Line Below", silent = true })
+map("n", "<A-O>", '@="m`O<C-V><Esc>``"<CR>', { desc = "Create Empty Line Above", silent = true })
 
 -- Center vertical jumps
-map('n', '<C-d>', '<C-d>zz')
-map('n', '<C-u>', '<C-u>zz')
-map('n', '<C-c>', '<C-i>zz')
-map('n', '<C-o>', '<C-o>zz')
-map('n', 'n', 'nzzzv')
-map('n', 'N', 'Nzzzv')
-map('n', '*', '*zzzv')
-map('n', '#', '#zzzv')
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")
+map("n", "<C-c>", "<C-i>zz")
+map("n", "<C-o>", "<C-o>zz")
+map("n", "n", "nzzzv")
+map("n", "N", "Nzzzv")
+map("n", "*", "*zzzv")
+map("n", "#", "#zzzv")
 
 -- Static cursor on J's
-map('n', 'J', 'mzJ`z')
+map("n", "J", "mzJ`z")
 
 -- Controlled edits
-map('x', '<leader>p', [["_dP]], { desc = 'Safe Paste' })          -- Keep paste buffer when replacing selected text
-map({ "n", "v" }, "<leader>dd", "\"_d", { desc = 'Safe Delete' }) -- Same for delete
-map({ 'n', 'v' }, '<leader>y', [["+y]], { desc = 'Yank to System' })
-map('n', '<leader>Y', [["+Y]], { desc = 'Yank EoL to System' })
-
+map("x", "<leader>p", [["_dP]], { desc = "Safe Paste" }) -- Keep paste buffer when replacing selected text
+map({ "n", "v" }, "<leader>dd", '"_d', { desc = "Safe Delete" }) -- Same for delete
+map({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to System" })
+map("n", "<leader>Y", [["+Y]], { desc = "Yank EoL to System" })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
-map('n', '<Esc>', '<cmd>nohlsearch<CR>')
+map("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
-map('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+map("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit Terminal Mode" })
 
 -- Make file executable
-map("n", "<leader>f", "<cmd>silent !chmod +x %<CR>", { desc = 'Make file executable' })
-
+map("n", "<leader>fx", "<cmd>silent !chmod +x %<CR>", { desc = "Make File Executable" })
 
 -- Move to window using the <ctrl> arrow keys
 map("n", "<C-Up>", "<C-w>k", { desc = "Go to Upper Window", remap = true })
