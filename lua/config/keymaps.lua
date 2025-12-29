@@ -45,16 +45,16 @@ map("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit Terminal Mode" })
 map("n", "<leader>fx", "<cmd>silent !chmod +x %<CR>", { desc = "Make File Executable" })
 
 -- Move to window using the <ctrl> arrow keys
-map("n", "<C-Up>", "<C-w>k", { desc = "Go to Upper Window", remap = true })
-map("n", "<C-Down>", "<C-w>j", { desc = "Go to Lower Window", remap = true })
-map("n", "<C-Left>", "<C-w>h", { desc = "Go to Left Window", remap = true })
-map("n", "<C-Right>", "<C-w>l", { desc = "Go to Right Window", remap = true })
+map({ "n", "t" }, "<C-Up>", "<cmd>wincmd k<cr>", { desc = "Go to Upper Window", remap = true })
+map({ "n", "t" }, "<C-Down>", "<cmd>wincmd j<cr>", { desc = "Go to Lower Window", remap = true })
+map({ "n", "t" }, "<C-Left>", "<cmd>wincmd h<cr>", { desc = "Go to Left Window", remap = true })
+map({ "n", "t" }, "<C-Right>", "<cmd>wincmd l<cr>", { desc = "Go to Right Window", remap = true })
 
 -- Resize window using <ctrl+shift> arrow keys
-map("n", "<C-S-Up>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
-map("n", "<C-S-Down>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
-map("n", "<C-S-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
-map("n", "<C-S-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
+map({ "n", "t" }, "<C-S-Up>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
+map({ "n", "t" }, "<C-S-Down>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
+map({ "n", "t" }, "<C-S-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
+map({ "n", "t" }, "<C-S-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
 
 -- Move Lines
 map("n", "<A-Down>", "<cmd>execute 'move .+' . v:count1<cr>==", { desc = "Move Down", silent = true })
