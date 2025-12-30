@@ -5,6 +5,40 @@ return {
   },
 
   {
+    "ThePrimeagen/harpoon",
+    keys = function()
+      local keys = {
+        {
+          "<leader>a",
+          function()
+            require("harpoon"):list():add()
+          end,
+          desc = "Harpoon File",
+        },
+        {
+          "<leader>h",
+          function()
+            local harpoon = require("harpoon")
+            harpoon.ui:toggle_quick_menu(harpoon:list())
+          end,
+          desc = "Harpoon Menu",
+        },
+      }
+
+      for i = 1, 9 do
+        table.insert(keys, {
+          "<A-" .. i .. ">",
+          function()
+            require("harpoon"):list():select(i)
+          end,
+          desc = "Harpoon to File " .. i,
+        })
+      end
+      return keys
+    end,
+  },
+
+  {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
       sort_case_insensitive = true,
