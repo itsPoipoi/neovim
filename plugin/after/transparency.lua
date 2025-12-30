@@ -11,8 +11,6 @@ vim.cmd("highlight FoldColumn guibg=none")
 vim.cmd("highlight Folded guibg=none")
 vim.cmd("highlight SignColumn guibg=none")
 vim.cmd("highlight NormalNC guibg=none")
-vim.cmd("highlight WhichKeyFloat guibg=none")
-vim.cmd("highlight WhichKeyNormal guibg=none")
 vim.cmd("highlight TelescopeBorder guibg=none")
 vim.cmd("highlight TelescopeNormal guibg=none")
 vim.cmd("highlight TelescopePromptBorder guibg=none")
@@ -46,6 +44,11 @@ vim.cmd("highlight NotifyERRORBorder guibg=none")
 vim.cmd("highlight NotifyWARNBorder guibg=none")
 vim.cmd("highlight NotifyTRACEBorder guibg=none")
 vim.cmd("highlight NotifyDEBUGBorder guibg=none")
+
+-- Whichkey
+vim.cmd("highlight WhichKeyFloat guibg=none")
+vim.cmd("highlight WhichKeyNormal guibg=none")
+vim.cmd("highlight WhichKeyBorder guibg=none")
 
 -- Snacks
 vim.cmd("highlight SnacksNotifier guibg=none")
@@ -98,6 +101,12 @@ vim.cmd("highlight SnacksScratch  guibg=none")
 vim.cmd("highlight SnacksScratchBorder guibg=none")
 vim.cmd("highlight SnacksScratchTitle guibg=none")
 vim.cmd("highlight SnacksStatusColumn guibg=none")
+
+vim.cmd("highlight SnacksWinBarNC guibg=none")
+vim.cmd("highlight SnacksNormalNC guibg=none")
+vim.cmd("highlight SnacksBackdrop guibg=none")
+vim.cmd("highlight SnacksWinBar   guibg=none")
+vim.cmd("highlight SnacksNormal   guibg=none")
 
 -- Noice
 vim.cmd("highlight NoiceCmdline   guibg=none")
