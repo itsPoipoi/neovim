@@ -188,3 +188,7 @@ vim.cmd("highlight NoiceHistoryBorder guibg=none")
 -- Mini
 vim.cmd("highlight MiniNotifyNormal guibg=none")
 vim.cmd("highlight MiniNotifyBorder guibg=none")
+
+-- Trouble
+vim.cmd("highlight TroubleCount guibg=none")
+vim.cmd("highlight TroubleNormal guibg=none")
