@@ -6,8 +6,8 @@ local map = vim.keymap.set
 -- Remap for Ergo-L
 map({ "n", "x", "v" }, "+", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
 map({ "n", "x", "v" }, "-", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = true, silent = true })
-map({ "n", "x", "v" }, ",", ";")
-map("n", ";", ",")
+-- map({ "n", "x", "v" }, ",", ";")
+-- map({ "n", "x", "v" }, ";", ",")
 map("n", "U", "<C-r>")
 
 -- Create empty lines
@@ -32,11 +32,6 @@ map("x", "<leader>p", [["_dP]], { desc = "Safe Paste" }) -- Keep paste buffer wh
 map({ "n", "v" }, "<leader>dd", '"_d', { desc = "Safe Delete" }) -- Same for delete
 map({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to System" })
 map("n", "<leader>Y", [["+Y]], { desc = "Yank EoL to System" })
-
--- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
--- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
--- or just use <C-\><C-n> to exit terminal mode
-map("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit Terminal Mode" })
 
 -- Make file executable
 map("n", "<leader>fx", "<cmd>silent !chmod +x %<CR>", { desc = "Make File Executable" })
