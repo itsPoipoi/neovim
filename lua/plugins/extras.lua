@@ -1,4 +1,4 @@
 return {
-  { "lambdalisue/vim-suda" },
-  { "ThePrimeagen/vim-be-good" },
+  { "lambdalisue/vim-suda", event = "VeryLazy" },
+  { "ThePrimeagen/vim-be-good", event = "VeryLazy" },
 }
