@@ -19,6 +19,9 @@ vim.cmd("highlight TelescopePromptBorder guibg=none")
 vim.cmd("highlight TelescopePromptTitle guibg=none")
 vim.cmd("highlight LineNr guibg=none")
 
+vim.cmd("highlight @markup.raw.markdown_inline guibg=none")
+vim.cmd("highlight @markup.heading.1.markdown guibg=none")
+
 -- transparent background for neotree
 vim.cmd("highlight NeoTreeNormal guibg=none")
 vim.cmd("highlight NeoTreeNormalNC guibg=none")
@@ -132,6 +135,7 @@ vim.cmd("highlight SnacksPickerInput guibg=none")
 vim.cmd("highlight SnacksPickerInputBorder guibg=none")
 vim.cmd("highlight SnacksPickerTitle guibg=none")
 vim.cmd("highlight SnacksPickerTitleBorder guibg=none")
+vim.cmd("highlight SnacksPickerToggle guibg=none")
 
 vim.cmd("highlight SnacksTerminal guibg=none")
 vim.cmd("highlight SnacksTerminalBorder guibg=none")
