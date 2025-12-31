@@ -1,15 +1,6 @@
 return {
   {
     "ThePrimeagen/harpoon",
-    branch = "harpoon2",
-    opts = {
-      menu = {
-        width = vim.api.nvim_win_get_width(0) - 4,
-      },
-      settings = {
-        save_on_toggle = true,
-      },
-    },
     keys = function()
       local keys = {
         {
@@ -28,7 +19,7 @@ return {
           desc = "Harpoon Menu",
         },
         {
-          "<A-a>",
+          "<M-r>",
           function()
             local harpoon = require("harpoon")
             harpoon:list():prev()
@@ -36,7 +27,7 @@ return {
           desc = "Harpoon to Prev File",
         },
         {
-          "<A-n>",
+          "<M-u>",
           function()
             local harpoon = require("harpoon")
             harpoon:list():next()
