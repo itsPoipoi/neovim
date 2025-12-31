@@ -33,9 +33,6 @@ map({ "n", "v" }, "<leader>dd", '"_d', { desc = "Safe Delete" }) -- Same for del
 map({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to System" })
 map("n", "<leader>Y", [["+Y]], { desc = "Yank EoL to System" })
 
--- Clear highlights on search when pressing <Esc> in normal mode
-map("n", "<Esc>", "<cmd>nohlsearch<CR>")
-
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
