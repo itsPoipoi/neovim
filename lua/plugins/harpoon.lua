@@ -4,7 +4,7 @@ return {
     keys = function()
       local keys = {
         {
-          "<leader>H",
+          "<leader>a",
           function()
             require("harpoon"):list():add()
           end,
@@ -17,6 +17,22 @@ return {
             harpoon.ui:toggle_quick_menu(harpoon:list())
           end,
           desc = "Harpoon Menu",
+        },
+        {
+          "<A-a>",
+          function()
+            local harpoon = require("harpoon")
+            harpoon:list():prev()
+          end,
+          desc = "Harpoon to Prev File",
+        },
+        {
+          "<A-n>",
+          function()
+            local harpoon = require("harpoon")
+            harpoon:list():next()
+          end,
+          desc = "Harpoon to Next File",
         },
       }
 
