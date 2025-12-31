@@ -6,8 +6,6 @@ local map = vim.keymap.set
 -- Remap for Ergo-L
 map({ "n", "x", "v" }, "+", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
 map({ "n", "x", "v" }, "-", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = true, silent = true })
--- map({ "n", "x", "v" }, ",", ";")
--- map({ "n", "x", "v" }, ";", ",")
 map("n", "U", "<C-r>")
 
 -- Create empty lines
