@@ -4,6 +4,10 @@ return {
     -- You can override the default options for a specific mode.
     -- Use it with `require("flash").jump({mode = "forward"})`
     ---@type table<string, Flash.Config>
+    jump = {
+      autojump = true,
+    },
+
     modes = {
       -- options used when flash is activated through
       -- `f`, `F`, `t`, `T`, `;` and `,` motions
@@ -13,8 +17,8 @@ return {
         -- `left` and `right` are always left and right.
         char_actions = function(motion)
           return {
-            [";"] = "prev", -- set to `left` to always go right
-            [","] = "next", -- set to `right` to always go left
+            [";"] = "prev", -- set to `left` to always go left
+            [","] = "next", -- set to `right` to always go right
             -- clever-f style
             [motion:lower()] = "next",
             [motion:upper()] = "prev",
