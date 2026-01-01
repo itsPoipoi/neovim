@@ -12,6 +12,41 @@ return {
     priority = 1000,
   },
   {
+    "EdenEast/nightfox.nvim",
+    lazy = true,
+    priority = 1000,
+  },
+  {
+    "ellisonleao/gruvbox.nvim",
+    lazy = true,
+    priority = 1000,
+  },
+  {
+    "rebelot/kanagawa.nvim",
+    lazy = true,
+    priority = 1000,
+  },
+  {
+    "rose-pine/neovim",
+    lazy = true,
+    priority = 1000,
+  },
+  {
+    "tahayvr/vhs80.nvim",
+    lazy = true,
+    priority = 1000,
+  },
+  {
+    "neanias/everforest-nvim",
+    lazy = true,
+    priority = 1000,
+  },
+  {
+    "kepano/flexoki-neovim",
+    lazy = true,
+    priority = 1000,
+  },
+  {
     "folke/tokyonight.nvim",
     name = "tokyonight",
     lazy = true,
@@ -38,6 +73,24 @@ return {
   },
   {
     "craftzdog/solarized-osaka.nvim",
+    lazy = true,
+    priority = 1000,
+    opts = {},
+  },
+  {
+    "loctvl842/monokai-pro.nvim",
+    lazy = true,
+    priority = 1000,
+    opts = {},
+  },
+  {
+    "somerocketeer/nagai-poolside.nvim",
+    lazy = true,
+    priority = 1000,
+    opts = {},
+  },
+  {
+    "somerocketeer/nagai-poolside.nvim",
     lazy = true,
     priority = 1000,
     opts = {},
