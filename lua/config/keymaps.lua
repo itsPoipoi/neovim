@@ -26,7 +26,7 @@ map("n", "#", "#zzzv")
 map("n", "J", "mzJ`z")
 
 -- Controlled edits
-map("x", "<leader>p", [["_dP]], { desc = "Safe Paste" }) -- Keep paste buffer when replacing selected text
+map("x", "<leader>pp", [["_dP]], { desc = "Safe Paste" }) -- Keep paste buffer when replacing selected text
 map({ "n", "v" }, "<leader>dd", '"_d', { desc = "Safe Delete" }) -- Same for delete
 map({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to System" })
 map("n", "<leader>Y", [["+Y]], { desc = "Yank EoL to System" })
