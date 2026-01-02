@@ -90,12 +90,6 @@ return {
     opts = {},
   },
   {
-    "somerocketeer/nagai-poolside.nvim",
-    lazy = true,
-    priority = 1000,
-    opts = {},
-  },
-  {
     "bjarneo/ethereal.nvim",
     lazy = true,
     priority = 1000,
