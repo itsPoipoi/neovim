@@ -202,6 +202,7 @@ vim.cmd("highlight TroubleNormal guibg=none")
 
 -- Treesitter Context
 vim.cmd("highlight TreesitterContextLineNumber guibg=none")
+vim.cmd("highlight TreesitterContext guibg=none")
 
 -- Git SignColumn
 vim.cmd("highlight GitSignsAdd guibg=none")
