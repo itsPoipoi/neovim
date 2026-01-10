@@ -19,6 +19,7 @@ vim.cmd("highlight TelescopePromptBorder guibg=none")
 vim.cmd("highlight TelescopePromptTitle guibg=none")
 vim.cmd("highlight LineNr guibg=none")
 vim.cmd("highlight ErrorMsg guibg=none")
+vim.cmd("highlight WinSeparator guibg=none")
 
 vim.cmd("highlight @markup.raw.markdown_inline guibg=none")
 vim.cmd("highlight @markup.heading.1.markdown guibg=none")
