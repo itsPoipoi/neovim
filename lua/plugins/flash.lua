@@ -5,6 +5,7 @@ return {
     -- Use it with `require("flash").jump({mode = "forward"})`
     ---@type table<string, Flash.Config>
     jump = {
+      ---@diagnostic disable-next-line: assign-type-mismatch
       autojump = true,
     },
 
