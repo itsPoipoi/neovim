@@ -30,7 +30,8 @@ return {
       -- if you want to open yazi instead of netrw, see below for more info
       open_for_directories = false,
       keymaps = {
-        show_help = "<f1>",
+        show_help = "<f2>",
+        open_file_in_tab = "<s-m-c-t>",
       },
     },
     -- 👇 if you use `open_for_directories=true`, this is recommended
