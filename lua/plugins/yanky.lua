@@ -2,7 +2,7 @@ return {
   "gbprod/yanky.nvim",
   event = "LazyFile",
   keys = {
-    { "<leader>p", false },
+    { "<leader>p", mode = { "n", "x" }, false },
     {
       "<leader>ph",
       function()
