@@ -6,7 +6,7 @@ return {
     ---@type table<string, Flash.Config>
     jump = {
       ---@diagnostic disable-next-line: assign-type-mismatch
-      autojump = true,
+      autojump = false,
     },
 
     modes = {
