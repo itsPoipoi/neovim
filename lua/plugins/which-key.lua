@@ -1,6 +1,15 @@
 return {
   {
     "folke/which-key.nvim",
-    opts = { preset = "modern" },
+    opts = {
+      preset = "modern",
+      spec = {
+        {
+          mode = { "n", "x" },
+          { "<leader>o", group = "opencode" },
+          { "<leader>p", group = "paste" },
+        },
+      },
+    },
   },
 }
