@@ -211,4 +211,4 @@ vim.cmd("highlight GitSignsChange guibg=none")
 vim.cmd("highlight GitSignsDelete guibg=none")
 
 -- Better Flash Label Contrast
-vim.cmd("highlight FlashLabel guifg=#000000")
+vim.cmd("highlight FlashLabel guifg=#FFFFFF guibg=#3b1a00")
