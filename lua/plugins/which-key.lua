@@ -8,6 +8,7 @@ return {
           mode = { "n", "x" },
           { "<leader>o", group = "opencode" },
           { "<leader>p", group = "paste" },
+          { "<leader>h", group = "harpoon" },
         },
       },
     },

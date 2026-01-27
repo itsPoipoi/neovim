@@ -11,7 +11,7 @@ return {
           desc = "Harpoon File",
         },
         {
-          "<leader>h",
+          "<leader>hh",
           function()
             local harpoon = require("harpoon")
             harpoon.ui:toggle_quick_menu(harpoon:list())
@@ -19,30 +19,30 @@ return {
           desc = "Harpoon Menu",
         },
         {
-          "<M-r>",
+          "<leader>hr",
           function()
             local harpoon = require("harpoon")
             harpoon:list():prev()
           end,
-          desc = "Harpoon to Prev File",
+          desc = "Go to Prev Harpoon",
         },
         {
-          "<M-u>",
+          "<leader>hu",
           function()
             local harpoon = require("harpoon")
             harpoon:list():next()
           end,
-          desc = "Harpoon to Next File",
+          desc = "Go to Next Harpoon",
         },
       }
 
       for i = 1, 9 do
         table.insert(keys, {
-          "<A-" .. i .. ">",
+          "<leader>h" .. i,
           function()
             require("harpoon"):list():select(i)
           end,
-          desc = "Harpoon to File " .. i,
+          desc = "Go to Harpoon " .. i,
         })
       end
       return keys
