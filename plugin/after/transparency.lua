@@ -209,3 +209,6 @@ vim.cmd("highlight TreesitterContext guibg=none")
 vim.cmd("highlight GitSignsAdd guibg=none")
 vim.cmd("highlight GitSignsChange guibg=none")
 vim.cmd("highlight GitSignsDelete guibg=none")
+
+-- Better Flash Label Contrast
+vim.cmd("highlight FlashLabel guifg=#000000")
