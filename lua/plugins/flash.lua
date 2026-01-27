@@ -9,6 +9,8 @@ return {
       autojump = false,
     },
 
+    labels = "asenflrtiuqcopwjmdyzxvbhgk",
+
     modes = {
       -- options used when flash is activated through
       -- `f`, `F`, `t`, `T`, `;` and `,` motions
