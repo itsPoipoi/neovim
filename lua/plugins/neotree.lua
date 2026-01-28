@@ -4,6 +4,21 @@ return {
     opts = {
       sort_case_insensitive = true,
 
+      window = {
+        mappings = {
+          ["P"] = {
+            "toggle_preview",
+            config = {
+              use_float = false,
+            },
+          },
+          ["<C-d>"] = { "scroll_preview", config = { direction = -20 } },
+          ["<C-u>"] = { "scroll_preview", config = { direction = 20 } },
+          ["<C-f>"] = { "scroll_preview", config = { direction = -40 } },
+          ["<C-b>"] = { "scroll_preview", config = { direction = 40 } },
+        },
+      },
+
       event_handlers = {
         {
           event = "file_open_requested",
