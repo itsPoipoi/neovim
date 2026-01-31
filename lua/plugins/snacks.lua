@@ -20,6 +20,12 @@ return {
           },
           { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
           {
+            icon = " ",
+            key = "p",
+            desc = "Projects",
+            action = ":lua Snacks.picker.projects()",
+          },
+          {
             icon = " ",
             key = "g",
             desc = "Find Text",
