@@ -13,3 +13,6 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 vim.o.termguicolors = true
+
+-- Smart suda.vim
+vim.g.suda_smart_edit = 1
