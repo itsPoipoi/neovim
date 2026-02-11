@@ -1,6 +1,12 @@
 return {
   "gbprod/yanky.nvim",
   event = "LazyFile",
+  opts = {
+    system_clipboard = {
+      sync_with_ring = false,
+    },
+    highlight = { timer = 150 },
+  },
   keys = {
     { "<leader>p", mode = { "n", "x" }, false },
     {
