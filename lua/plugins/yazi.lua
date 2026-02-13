@@ -6,26 +6,28 @@ return {
     dependencies = {
       { "nvim-lua/plenary.nvim", lazy = true },
     },
+
     keys = {
       -- 👇 in this section, choose your own keymappings!
       {
-        "<leader>f+",
+        "<leader>e",
         mode = { "n", "v" },
         "<cmd>Yazi<cr>",
         desc = "Yazi: Current",
       },
       {
         -- Open in the current working directory
-        "<leader>f-",
+        "<leader>E",
         "<cmd>Yazi cwd<cr>",
         desc = "Yazi: CWD",
       },
       {
-        "<c-=>",
+        "<C-=>",
         "<cmd>Yazi toggle<cr>",
-        desc = "Last Yazi Session",
+        desc = "Yazi: Last Session",
       },
     },
+
     opts = {
       -- if you want to open yazi instead of netrw, see below for more info
       open_for_directories = true,
