@@ -1,6 +1,41 @@
 return {
   {
     "nvim-neo-tree/neo-tree.nvim",
+    keys = function()
+      return {
+        {
+          "<leader>fe",
+          function()
+            require("neo-tree.command").execute({ toggle = true, dir = LazyVim.root() })
+          end,
+          desc = "Explorer NeoTree (Root Dir)",
+        },
+        {
+          "<leader>fE",
+          function()
+            require("neo-tree.command").execute({ toggle = true, dir = vim.uv.cwd() })
+          end,
+          desc = "Explorer NeoTree (cwd)",
+        },
+        -- { "<leader>e", "<leader>fe", desc = "Explorer NeoTree (Root Dir)", remap = true },
+        -- { "<leader>E", "<leader>fE", desc = "Explorer NeoTree (cwd)", remap = true },
+        {
+          "<leader>ge",
+          function()
+            require("neo-tree.command").execute({ source = "git_status", toggle = true })
+          end,
+          desc = "Git Explorer",
+        },
+        {
+          "<leader>be",
+          function()
+            require("neo-tree.command").execute({ source = "buffers", toggle = true })
+          end,
+          desc = "Buffer Explorer",
+        },
+      }
+    end,
+
     opts = {
       sort_case_insensitive = true,
 
@@ -27,6 +62,15 @@ return {
             -- vim.cmd("Neotree close")
             -- OR
             require("neo-tree.command").execute({ action = "close" })
+          end,
+        },
+        {
+          event = "after_render",
+          handler = function(state)
+            if not require("neo-tree.sources.common.preview").is_active() then
+              state.config = { use_float = false }
+              state.commands.toggle_preview(state)
+            end
           end,
         },
       },
