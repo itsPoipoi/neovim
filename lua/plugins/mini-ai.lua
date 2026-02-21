@@ -2,7 +2,7 @@ return {
   "nvim-mini/mini.ai",
   opts = {
     custom_textobjects = {
-      e = function(ai_type, id, opts)
+      w = function(ai_type, id, opts)
         if ai_type == "a" then
           return {
             {
