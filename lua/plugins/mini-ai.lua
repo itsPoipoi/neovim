@@ -2,7 +2,22 @@ return {
   "nvim-mini/mini.ai",
   opts = {
     custom_textobjects = {
-      w = function(ai_type, id, opts)
+      e = function(ai_type, id, opts) -- original word textobject
+        if ai_type == "a" then
+          return { "%f[%w_][%w_]+%s?" }
+        end
+        if ai_type == "i" then
+          local reg = MiniAi.find_textobject("a", id, opts)
+          if reg then
+            local line = vim.fn.getline(reg.from.line)
+            local _, s = line:find("^[_%-%.%,%s]*.", reg.from.col)
+            local e = line:sub(1, reg.to.col):find(".%s?$")
+            return vim.tbl_deep_extend("force", reg, { from = { col = s }, to = { col = e } })
+          end
+        end
+      end,
+
+      w = function(ai_type, id, opts) -- spider-like word textobject
         if ai_type == "a" then
           return {
             {
@@ -26,8 +41,8 @@ return {
           if reg then
             local line = vim.fn.getline(reg.from.line)
             local _, s = line:find("^[_%-%.%,%s]*.", reg.from.col)
-            local e = line:sub(1, reg.to.col):find(".[_%-%.%,%s]*$")
-            return vim.tbl_deep_extend("force", reg, { from = { col = s }, to = { col = e } })
+            local w = line:sub(1, reg.to.col):find(".[_%-%.%,%s]*$")
+            return vim.tbl_deep_extend("force", reg, { from = { col = s }, to = { col = w } })
           end
         end
       end,
