@@ -13,11 +13,11 @@ return {
               "%f[%u_%-%.%,]%u%l+[_%-%.%,%s]*",
               "%f[%u_%-%.%,]%u%u+[_%-%.%,%s]*",
               -- __pattern
-              "%f[_%-%.%,][_%-%.%,%s]+%d+",
-              "%f[_%-%.%,][_%-%.%,%s]+%l+",
-              "%f[_%-%.%,][_%-%.%,%s]+%u%f[%A]",
-              "%f[_%-%.%,][_%-%.%,%s]+%u%l+",
-              "%f[_%-%.%,][_%-%.%,%s]+%u%u+",
+              "%f[_%-%.%,][_%-%.%,]+%d+",
+              "%f[_%-%.%,][_%-%.%,]+%l+",
+              "%f[_%-%.%,][_%-%.%,]+%u%f[%A]",
+              "%f[_%-%.%,][_%-%.%,]+%u%l+",
+              "%f[_%-%.%,][_%-%.%,]+%u%u+",
             },
           }
         end
@@ -25,7 +25,7 @@ return {
           local reg = MiniAi.find_textobject("a", id, opts)
           if reg then
             local line = vim.fn.getline(reg.from.line)
-            local _, s = line:find("^[_%-%.%,%s]*.", reg.from.col)
+            local _, s = line:find("^[_%-%.%,]*.", reg.from.col)
             local e = line:sub(1, reg.to.col):find(".[_%-%.%,%s]*$")
             return vim.tbl_deep_extend("force", reg, { from = { col = s }, to = { col = e } })
           end
