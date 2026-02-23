@@ -19,7 +19,7 @@ return {
           desc = "Harpoon Menu",
         },
         {
-          "<leader>hr",
+          "<leader>hn",
           function()
             local harpoon = require("harpoon")
             harpoon:list():prev()
@@ -27,7 +27,7 @@ return {
           desc = "Go to Prev Harpoon",
         },
         {
-          "<leader>hu",
+          "<leader>hr",
           function()
             local harpoon = require("harpoon")
             harpoon:list():next()
