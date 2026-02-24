@@ -21,12 +21,12 @@ return {
         if ai_type == "a" then
           return {
             {
-              -- pattern, [^_]pattern_*
-              "%f[%d_%-%.%,%s]%d+[_%-%.%,%s]*",
-              "%f[%a_%-%.%,%s]%l+[_%-%.%,%s]*",
-              "%f[%u_%-%.%,%s]%u%f[%A][_%-%.%,%s]*",
-              "%f[%u_%-%.%,%s]%u%l+[_%-%.%,%s]*",
-              "%f[%u_%-%.%,%s]%u%u+[_%-%.%,%s]*",
+              -- pattern, [^_]pattern_?
+              "%f[%d_%-%.%,%s]%d+[_%-%.%,%s]?",
+              "%f[%a_%-%.%,%s]%l+[_%-%.%,%s]?",
+              "%f[%u_%-%.%,%s]%u%f[%A][_%-%.%,%s]?",
+              "%f[%u_%-%.%,%s]%u%l+[_%-%.%,%s]?",
+              "%f[%u_%-%.%,%s]%u%u+[_%-%.%,%s]?",
               -- __pattern
               "%f[_%-%.%,%s][_%-%.%,%s]+%d+",
               "%f[_%-%.%,%s][_%-%.%,%s]+%l+",
@@ -41,7 +41,7 @@ return {
           if reg then
             local line = vim.fn.getline(reg.from.line)
             local _, s = line:find("^[_%-%.%,%s]*.", reg.from.col)
-            local w = line:sub(1, reg.to.col):find(".[_%-%.%,%s]*$")
+            local w = line:sub(1, reg.to.col):find(".[_%-%.%,%s]?$")
             return vim.tbl_deep_extend("force", reg, { from = { col = s }, to = { col = w } })
           end
         end
