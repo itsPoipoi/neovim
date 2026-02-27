@@ -21,11 +21,6 @@ return {
         "<cmd>Yazi cwd<cr>",
         desc = "Yazi: CWD",
       },
-      {
-        "<C-=>",
-        "<cmd>Yazi toggle<cr>",
-        desc = "Yazi: Last Session",
-      },
     },
 
     opts = {
