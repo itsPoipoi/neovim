@@ -41,7 +41,7 @@ map({ "n", "t" }, "<C-Left>", "<cmd>wincmd h<cr>", { desc = "Go to Left Window",
 map({ "n", "t" }, "<C-Right>", "<cmd>wincmd l<cr>", { desc = "Go to Right Window", remap = true })
 
 -- Resize window using <ctrl+shift> arrow keys
-map({ "n", "t" }, "<C-S-Up>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
-map({ "n", "t" }, "<C-S-Down>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
-map({ "n", "t" }, "<C-S-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
-map({ "n", "t" }, "<C-S-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
+map({ "n", "t" }, "<C-A-Up>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
+map({ "n", "t" }, "<C-A-Down>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
+map({ "n", "t" }, "<C-A-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
+map({ "n", "t" }, "<C-A-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window Width" })
