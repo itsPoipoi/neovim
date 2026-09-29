@@ -5,6 +5,7 @@ require("config.remote_clipboard").setup()
 
 -- vim.opt.clipboard = vim.env.SSH_CONNECTION and "" or "unnamed" -- Don’t sync with system clipboard
 
+vim.g.autoformat = false
 vim.o.scrolloff = 10
 
 vim.opt.swapfile = false
