@@ -3,7 +3,7 @@ require("config.remote_clipboard").setup()
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
-vim.opt.clipboard = vim.env.SSH_CONNECTION and "" or "unnamed" -- Don’t sync with system clipboard
+-- vim.opt.clipboard = vim.env.SSH_CONNECTION and "" or "unnamed" -- Don’t sync with system clipboard
 
 vim.o.scrolloff = 10
 
